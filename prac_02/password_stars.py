@@ -4,7 +4,7 @@ def main():
 
 
 def print_password(password):
-    """Print stars based on the length of the password"""
+    """Print stars based on length of password"""
     for i in range(len(password)):
         print("*", end="")
 
