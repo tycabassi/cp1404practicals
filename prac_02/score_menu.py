@@ -23,6 +23,7 @@ def main():
 
 
 def get_valid_score():
+    """Get a valid score and return it"""
     score = int(input("Enter a score between 1 and 100: "))
     while score < 1 or score > 100:
         print("Invalid")
@@ -31,6 +32,7 @@ def get_valid_score():
 
 
 def determine_score(score):
+    """Determine a score and print the result"""
     if score < 0 or score > 100:
         print("Invalid score")
     elif score >= 90:
