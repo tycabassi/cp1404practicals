@@ -14,8 +14,7 @@ def main():
         elif choice == "P":
             determine_score(score)
         elif choice == "S":
-            for i in range(score):
-                print("*")
+            print_stars(score)
         else:
             print("Invalid choice")
         print(MENU)
@@ -41,6 +40,11 @@ def determine_score(score):
         print("Passable")
     else:
         print("Bad")
+
+
+def print_stars(score):
+    for i in range(score):
+        print("*", end="")
 
 
 main()
