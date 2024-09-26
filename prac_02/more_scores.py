@@ -2,7 +2,7 @@ import random
 
 
 def main():
-    number_of_scores = int(input("How many scores do you want to generate? "))
+    number_of_scores = int(input("How many scores do you want to generate: "))
     in_file = open("results.txt", "w")
     for i in range(number_of_scores):
         random_score = random.randint(1, 100)
@@ -13,7 +13,7 @@ def main():
 
 def determine_score(random_score):
     if random_score < 0 or random_score > 100:
-        return "Invalid score"
+        return "Invalid"
     elif random_score >= 90:
         return "Excellent"
     elif random_score >= 50:
