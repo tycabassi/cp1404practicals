@@ -23,8 +23,7 @@ for i in range(number_of_stars):
 
 
 # d
-count = 0
 number_of_stars = int(input("Enter number of stars: "))
 for i in range(number_of_stars):
-    count += 1
-    print("*" * count)
+    i += 1
+    print("*" * i)
