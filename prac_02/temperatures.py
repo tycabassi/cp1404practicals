@@ -25,6 +25,4 @@ def convert_celsius_to_fahrenheit():
     print(f"Result: {fahrenheit:.2f} F")
 
 
-
-
 main()
