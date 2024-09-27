@@ -2,6 +2,9 @@ import random
 
 
 def main():
+    fahrenheit = get_temperature_fahrenheit()
+    # Returns none first function works fine, troubleshoot after work
+    calculate_temperature_celsius(fahrenheit)
 
 
 
