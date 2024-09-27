@@ -1,5 +1,5 @@
-MENU = """(C)elsius --> Fahrenheit
-(F)ahrenheit --> Celsius"""
+MENU = """(C)elsius ---> Fahrenheit
+(F)ahrenheit ---> Celsius"""
 
 
 def main():
