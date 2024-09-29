@@ -43,6 +43,7 @@ def determine_score(score):
 
 
 def print_stars(score):
+    """Print stars based on the score"""
     for i in range(score):
         print("*", end="")
 
