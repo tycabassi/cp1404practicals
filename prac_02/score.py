@@ -11,7 +11,7 @@ def main():
     print(f"The user's score is {score} which is {grade}")
     random_score = random.randint(1, 100)
     random_grade = determine_score(random_score)
-    print(f"The random's score is {random_score} which is {random_grade}")
+    print(f"The random score is {random_score} which is {random_grade}")
 
 
 def determine_score(score):
