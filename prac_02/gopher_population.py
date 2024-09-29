@@ -1,30 +1,27 @@
-
 import random
+
 YEARS = 10
 MENU = "Welcome to the starting Gopher Population Simulator"
+
+
 def main():
+    print(MENU)
+    population = int(input("Starting Population: "))
     for i in range(YEARS):
-        while i < YEARS:
-            population = int(input("Starting Population: "))
-            calculate_population(population)
-            i += 1
-            print(f"Year: {i}")
-            print(f"Population: {population}")
+        gophers_born, gopher_deaths = calculate_population_fluctuation(population)
+        new_population = (population + gophers_born) - gopher_deaths
+        i += 1
+        print(f"{gophers_born} gophers were born. {gopher_deaths} died.")
+        print(f"Population: {new_population}")
+        print(f"Year: {i}\n")
 
 
-
-def calculate_population(population):
-    born_rate = random.randint(10,20)
-    death_rate = random.randint(5, 25)
-    print(f"Born rate: {born_rate}")
-    print(f"Deathrate: {death_rate}")
-
-
-
-
-
-# def gopher_deaths_calculator(starting_population):
-
+def calculate_population_fluctuation(population):
+    born_chance = random.randint(10, 20)
+    death_chance = random.randint(5, 25)
+    gophers_born = (population * born_chance / 100)
+    gopher_deaths = (population * death_chance / 100)
+    return gophers_born, gopher_deaths
 
 
 
