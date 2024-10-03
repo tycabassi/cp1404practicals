@@ -13,7 +13,7 @@ while not is_finished:
     except ValueError:
         print("Please enter a valid integer.")
     except ZeroDivisionError:
-        print("Please enter a number which isnt divisible by 0")
+        print("Please enter a number which is > 0")
 print("Division result is:", division)
 
 # A ValueError would occur if i was to type in say "w" or a symbol instead of an integer
