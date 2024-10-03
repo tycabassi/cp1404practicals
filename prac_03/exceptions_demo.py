@@ -10,7 +10,6 @@ while not is_finished:
         is_finished = True
     except ValueError:
         print("Please enter a valid integer.")
-        result = int(input("Enter a valid integer: "))
 print("Valid result is:", result)
 
 # A ValueError would occur if i was to type in say "w" or a symbol instead of an integer
