@@ -34,7 +34,7 @@ for i, number in enumerate(numbers, 1):
 
 
 # 1922 Gibson L-5 CES for about $16,036!
-print(f"{year}{name} for about {cost}")
+print(f"{year} {name} for about ${round(cost)}")
 # produce the following right-aligned output (DO NOT use a list):
 # 2 ^ 0 is    1
 # 2 ^ 1 is    2
@@ -48,5 +48,6 @@ print(f"{year}{name} for about {cost}")
 # 2 ^ 9 is  512
 # 2 ^10 is 1024
 
-for i in range(11):
+for i in range(10):
     print(f"2 ^{i} is {2**i}")
+print(f"2 ^{10} is {2 ** 10:4}")
