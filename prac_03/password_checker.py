@@ -43,11 +43,6 @@ def is_valid_password(password):
             number_of_special += 1
         else:
             return False
-    print(f"Lowercase: {number_of_lower}")
-    print(f"Uppercase: {number_of_upper}")
-    print(f"Digit: {number_of_digit}")
-    print(f"Special: {number_of_special}")
-
     return True
 
 
