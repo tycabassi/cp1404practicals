@@ -11,6 +11,6 @@ for word in words:
         word_to_occurrence[word] += 1
     else:
         word_to_occurrence[word] = 1
-for word, count in word_to_occurrence.items():
-    print(f"{word}: {count}")
-
+max_length = max([len(word) + 1 for word, words in word_to_occurrence.items()])  # +1 as it looks crammed with no space
+for word, count in sorted(word_to_occurrence.items()):
+    print(f"{word:{max_length}}: {count}")
