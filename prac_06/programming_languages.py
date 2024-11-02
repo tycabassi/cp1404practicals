@@ -1,8 +1,9 @@
 """Estimated time: 20-25 minutes
-Actual time: """
+Actual time: 31 minutes"""
 
 
 class ProgrammingLanguage:
+    """Store information about a programming language sorting them if they are dynamic or not."""
     def __init__(self, name="", typing="", reflection="", year=""):
         self.name = name
         self.typing = typing
@@ -10,13 +11,11 @@ class ProgrammingLanguage:
         self.year = year
 
     def is_dynamic(self):
-        self.typing = "Dynamic"
+        """Returns true if the language is dynamic."""
+        return self.typing == "Dynamic"
 
     def __str__(self):
+        """Returns a string representation of the language."""
         return f"{self.name}, {self.typing} Typing, Reflection={self.reflection}, First appeared in {self.year}"
 
-# language_type = input("Enter the type of programming language:")
-# reflected = input("What type of reflection is the language?(Dynamic)(Static)").title()
-# year = input("Enter a year")
-#
-# programming_language = ProgrammingLanguage(name, language_type, reflected, year)
+
