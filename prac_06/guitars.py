@@ -1,14 +1,18 @@
-from guitar import Guitar
+from prac_06.guitar import Guitar
+
 my_guitars = []
 print("My Guitars!")
 guitar_name = input("Name: ")
-year = input("Year: ")
-cost = float(input("Cost: $"))
+while guitar_name != "":
+    year = int(input("Year: "))
+    cost = float(input("Cost: $"))
+    new_guitar = Guitar(guitar_name, year, cost)
+    print(f"{new_guitar} added")
+    my_guitars.append(new_guitar)
+    guitar_name = input("Name: ")
 
-new_guitar = Guitar(guitar_name, year, cost)
-print(new_guitar)
-
-
-
-
-
+for i, guitar in enumerate(my_guitars):
+    vintage_string = ""
+    if guitar.is_vintage() is True:
+        vintage_string = "(vintage)"
+    print(f"Guitar {i+1}: {guitar.name:>20} ({guitar.year}), worth ${guitar.cost:10,.2f}{vintage_string}")
