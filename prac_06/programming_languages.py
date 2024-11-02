@@ -3,14 +3,20 @@ Actual time: """
 
 
 class ProgrammingLanguage:
-    def __init__(self, typing="", reflection="", year=""):
+    def __init__(self, name="", typing="", reflection="", year=""):
+        self.name = name
         self.typing = typing
         self.reflection = reflection
         self.year = year
 
+    def is_dynamic(self):
+        self.typing = "Dynamic"
 
-language_type = input("Enter the type of programming language:")
-reflected = input("Is it reflected?")
-year = input("Enter a year")
+    def __str__(self):
+        return f"{self.name}, {self.typing} Typing, Reflection={self.reflection}, First appeared in {self.year}"
 
-programming_language = ProgrammingLanguage(language_type, reflected, year)
+# language_type = input("Enter the type of programming language:")
+# reflected = input("What type of reflection is the language?(Dynamic)(Static)").title()
+# year = input("Enter a year")
+#
+# programming_language = ProgrammingLanguage(name, language_type, reflected, year)
