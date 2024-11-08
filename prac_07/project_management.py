@@ -1,5 +1,6 @@
 """Estimated time: 1hr 45
 Actual time: """
+from prac_07.project import Project
 import datetime
 
 MENU = ("(L)oad projects\n(S)ave projects\n(D)isplay projects\n(F)ilter projects by date\n(A)dd new project"
@@ -28,10 +29,11 @@ def main():
         choice = input("Enter a choice: ").lower()
 
 
-# date_string = input("Date (d/m/yyyy): ")  # e.g., "30/9/2022"
-# date = datetime.datetime.strptime(date_string, "%d/%m/%Y").date()
-# print(f"That day is/was {date.strftime('%A')}")
-# print(date.strftime("%d/%m/%Y"))
+date_string = input("Date (d/m/yyyy): ")  # e.g., "30/9/2022"
+date = datetime.datetime.strptime(date_string, "%d/%m/%Y").date()
+print(f"That day is/was {date.strftime('%A')}")
+print(date.strftime("%d/%m/%Y"))
 
-
+project = Project("Dishes", date_string, 7, 340, 9)
+print(project)
 main()
