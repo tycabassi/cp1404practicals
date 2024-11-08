@@ -6,11 +6,13 @@ def main():
     get_guitar_details(guitars)
     guitar_name = input("Name: ")
     while guitar_name != "":
-        year = int(input("Year: "))  # Needs to be and int as its subtracted from CURRENT_YEAR in is_vintage()
+        year = input("Year: ")
         cost = float(input("Cost: $"))
         new_guitar = Guitar(guitar_name, year, cost)
         print(f"{new_guitar} added")
         guitar_name = input("Name: ")
+        guitars.append(new_guitar)
+    sort_guitars(guitars)
 
 
 def get_guitar_details(guitars):
