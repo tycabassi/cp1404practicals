@@ -16,7 +16,7 @@ def main():
         elif choice == "s":
             pass
         elif choice == "d":
-            pass
+            display_projects()
         elif choice == "f":
             pass
         elif choice == "a":
@@ -39,6 +39,14 @@ def main():
 
 
 #
+
+
+
+def display_projects():
+    in_file = open("projects.txt", "r")
+    for line in in_file:
+        parts = line.split()
+        print(Project(parts[0], parts[1], parts[2], parts[3], parts[4]))
 
 
 # Add new project function
