@@ -9,3 +9,7 @@ class Project:
     def __str__(self):
         return (f"Name: {self.name},start_date: {self.start_date},priority: {self.priority},estimate: {self.estimate},"
                 f"completion: {self.completion}")
+
+    def is_complete(self):
+        if self.completion == 100:
+            return True
