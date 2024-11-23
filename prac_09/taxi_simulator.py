@@ -22,8 +22,10 @@ def main():
             else:
                 distance = int(input("Drive how far?"))
                 current_taxi.start_fare()
-                print(f"The {current_taxi} trip cost you{current_taxi.get_fare(distance)} miles")
-
+                current_taxi.drive(distance)
+                print(f"The {current_taxi} trip cost you ${current_taxi.get_fare()}")
+                bill_to_date += current_taxi.get_fare()
+                print(f"Bill to date: ${bill_to_date}")
         else:
             print("Invalid choice")
         print(INITIAL_MESSAGE)
