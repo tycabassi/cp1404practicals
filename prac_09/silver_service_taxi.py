@@ -13,4 +13,4 @@ class SilverServiceTaxi(Taxi):
 
     def __str__(self):
         """Returns a string representation of the Silver Service Taxi"""
-        return f"{super().__str__()} + $ {self.flag_fall:.2f} flag fall"
+        return f"{super().__str__()} + flag fall of ${self.flag_fall:.2f}"
