@@ -48,14 +48,16 @@ def run_tests():
     car = Car(fuel=10)
     assert car.fuel == 10
 
+    car = Car()
+    assert car.fuel == 0
 
 run_tests()
 
-# TODO: 3. Uncomment the following line and run the doctests
-# (PyCharm may see your >>> doctest comments and run doctests anyway.)
-# doctest.testmod()
 
-# TODO: 4. Fix the failing is_long_word function
+# (PyCharm may see your >>> doctest comments and run doctests anyway.)
+doctest.testmod()
+
+
 # (Don't change the tests, change the function!)
 
 # TODO: 5. Write and test a function to format a phrase as a sentence,
@@ -67,3 +69,11 @@ run_tests()
 # and one more that you decide is a useful test.
 # Run your doctests and watch the tests fail.
 # Then write the body of the function so that the tests pass.
+
+
+def phrase_to_sentence_conversion(phrase):
+    sentence = phrase.capitalize()
+    if sentence[-1] != '.':
+        sentence = f"{sentence}."
+    return sentence
+
